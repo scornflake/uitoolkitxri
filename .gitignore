@@ -11,6 +11,7 @@
 /[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
+# This is processed before the others. It forces all .meta files to be added (! == negate)
 !/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
@@ -43,6 +44,10 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# To fix a prob where we hide .csproj. But the meta is still there. We don't actually want that.
+# So, for now, let the cs proj be there. that way on another host you won't have the .meta being deleted cos the .csproj is there.
+!/[Aa]ssets/**/*.csproj
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
@@ -53,8 +58,14 @@ sysinfo.txt
 
 # Builds
 *.apk
-*.unitypackage
+#*.unitypackage
 
 # Crashlytics generated file
 crashlytics-build.properties
+Builds*.zip
+Builds (6)
+Builds-MM2
+Assets/InitTestScene*.unity
+Assets/InitTestScene*.unity.meta
+Library0LD
 

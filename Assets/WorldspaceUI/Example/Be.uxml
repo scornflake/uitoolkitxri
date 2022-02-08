@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="Be.uss" />
+    <ui:VisualElement name="Root" style="justify-content: space-between; align-items: stretch; flex-grow: 1; padding-bottom: 20px;">
+        <ui:VisualElement name="Persistence" style="flex-direction: row; justify-content: center; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+            <ui:Button text="Save World" display-tooltip-when-elided="true" name="SaveWorld" class="be-button" />
+            <ui:Button text="Clear World" display-tooltip-when-elided="true" name="ClearWorld" class="be-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LowerHalf" style="justify-content: flex-start; align-items: center; left: auto;">
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitApp" class="be-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
