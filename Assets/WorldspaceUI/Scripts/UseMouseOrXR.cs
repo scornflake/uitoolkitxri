@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using Unity.XR.CoreUtils;
+﻿using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
-using Object = UnityEngine.Object;
 
 namespace WorldspaceUI.Scripts
 {
@@ -16,7 +13,7 @@ namespace WorldspaceUI.Scripts
             Camera mainCam = Camera.main;
             if (!mainCam) return;
 
-            WorldSpaceUIDocument doc = Object.FindObjectOfType<WorldSpaceUIDocument>();
+            WorldSpaceUIDocument doc = FindObjectOfType<WorldSpaceUIDocument>();
             if (!doc) return;
             
             if (UseMouse)
@@ -29,13 +26,13 @@ namespace WorldspaceUI.Scripts
                 }
                 
                 // Hook up right source
-                doc.RaycastSource = Object.FindObjectOfType<MouseRaycastSource>().gameObject;
+                doc.RaycastSource = FindObjectOfType<MouseRaycastSource>().gameObject;
                 foreach (var movementFaker in GetComponents<XRPointerMovementFaker>())
                 {
                     movementFaker.enabled = false;
                 }
 
-                var xrOrigin = Object.FindObjectOfType<XROrigin>();
+                var xrOrigin = FindObjectOfType<XROrigin>();
                 if (xrOrigin)
                 {
                     xrOrigin.gameObject.SetActive(false);
